@@ -73,8 +73,8 @@ module.exports = {
       platform: 'github',
       owner: 'xyyolab',
       repo: 'blog',
-      clientId: process.env.GithubId,
-      clientSecret: process.env.GithubSecret
+      clientId: process.env.VSSUEID,
+      clientSecret: process.env.VSSUESECRET
     },
     logo: '/images/self-round.png',
     noFoundPageByTencent: false,

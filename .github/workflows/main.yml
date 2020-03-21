@@ -16,6 +16,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
+          VSSUEID: ${{ secrets.VSSUEID }}
+          VSSUESECRET: ${{ secrets.VSSUESECRET }}
           persist-credentials: false
 
       # build project
