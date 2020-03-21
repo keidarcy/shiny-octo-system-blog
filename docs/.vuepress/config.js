@@ -1,6 +1,5 @@
 module.exports = {
   theme: 'reco',
-  base: '/blog/',
   plugins: ['flowchart', 'ribbon'],
   head: [
     ['link', { rel: 'icon', href: '/images/favicon.ico' }],
