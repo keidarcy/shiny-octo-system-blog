@@ -1,0 +1,184 @@
+// 底纹背景
+body
+  background-size 100%
+  background-image url('/images/line_bg.svg')
+  background-attachment fixed
+  background-repeat no-repeat
+  background-position 50%
+
+#app
+  background-color: rgba(0, 0, 0, .05) !important
+  font-family: Nunito !important;
+span
+  font-family: Nunito !important;
+.jumppoint
+  visibility hidden
+div.tags > span:nth-child(1)
+  display none
+  background-color: unset !important
+code 
+  font-size 1em !important
+
+.home-blog
+  .hero
+    z-index -1
+    h1
+    h3 > .title
+      font-size: 80px !important
+      // margin 1.5rem auto 1rem !important
+    .description
+      position inline
+      background-image:linear-gradient(to right, rgba(255, 105, 180, 0.5) 0%, rgba(255, 215, 0, 0.5) 50%, rgba(46, 229, 157, 0.5) 100%)
+      font-family: monospace !important;
+      font-size: 30px !important
+      margin: 5rem auto !important
+    .mask
+      display none !important 
+      background-position-y bottom !important
+      &::after
+        display none !important
+    h1, .description, .action, .huawei
+      color #333 !important
+      // text-shadow 2px 2px 1px #888
+  .info-wrapper
+    box-shadow none !important
+    background var(--default-color-5) !important
+    &:hover
+      box-shadow none !important
+    > h4
+      position relative
+      i
+        display none
+      &::before
+        content ''
+        position absolute
+        left -15px
+        width 3px
+        height 20px
+        background-color $accentColor
+    .personal-info-wrapper
+      padding-top 20px
+      .name
+        // display none
+      .num h3
+        font-size 2em
+        color #999
+      .num > div:first-child
+        border-right 1px solid transparent
+    .category-wrapper .category-item
+      box-shadow none !important
+
+// 侧栏导航背景
+.sidebar
+  background-color var(--default-color-3) !important
+  
+// 页面去背景
+.page
+  background transparent
+  // 增加文章内容块宽度（740px => 830px）
+  .page-title, 
+  .content__default:not(.custom)
+    max-width 830px !important
+    background-color var(--background-color)
+    box-shadow $boxShadow
+  .page-title
+    position relative
+    margin-bottom 20px
+    background-color transparent
+    box-shadow none
+    z-index 10
+    > h1
+      margin 5px 0
+    > hr
+      display none
+    > div
+      padding 0 10px
+      position initial
+      @media (min-width: 480px)
+        top 34px
+        right 0
+
+// 分页去背景
+.pagation.pagation
+  background transparent !important
+  .pagation-list
+    .jump:not(.bgprimary)
+      background-color var(--background-color);
+
+// 时间轴
+.timeline-wrapper
+  .year
+    font-size 32px
+    background transparent
+  .year-wrapper
+    margin-top 10px
+    background var(--background-color)
+    li
+      padding 10px !important
+      .date::before
+        top 21px !important
+
+// 评论
+.vssue
+  border-radius $borderRadius
+  background rgba(0, 0, 0, 0.05)
+  .vssue-header
+  .vssue-body
+    .vssue-new-comment
+      .vssue-comment-avatar
+        img
+          border-radius $borderRadius
+          box-shadow $boxShadow
+      .vssue-new-comment-body
+        box-shadow $boxShadow
+        background #f6f8fa
+        .vssue-new-comment-input
+          border-radius $borderRadius
+    .vssue-comments
+      .vssue-comment
+        .vssue-comment-avatar
+          img
+            border-radius $borderRadius
+            box-shadow $boxShadow
+        .vssue-comment-body
+          box-shadow $boxShadow
+          .vssue-comment-header
+            background #f0f2f4
+          .vssue-comment-main
+            background #f6f8fa
+          .vssue-comment-footer
+            background #f0f2f4
+.link-block
+  margin 0 -5px
+  width 100%
+  > .link-item
+    margin 15px 7px 0
+    padding 10px
+    display inline-block
+    width 190px
+    height 100px
+    text-align center
+    background #f0f2f4
+    cursor pointer
+    text-decoration none !important
+    border 1px solid transparent
+    border-radius 4px
+    box-sizing border-box
+    overflow hidden
+    &:hover
+      border-color $accentColor
+    p
+      margin 0
+      line-height inherit
+      &.title
+        font-family: monospace !important;
+        font-size: 30px !important 
+        padding-top 10px
+        padding-bottom 5px
+      &.intro
+        font-size .8em
+        color #666
+        display -webkit-box
+        -webkit-box-orient vertical
+        -webkit-line-clamp 2
+        overflow hidden

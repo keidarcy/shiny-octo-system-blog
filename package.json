@@ -1,0 +1,22 @@
+{
+  "name": "xyyolab-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vuepress": "^1.4.0",
+    "vuepress-theme-reco": "^1.3.2"
+  },
+  "devDependencies": {
+    "vuepress-plugin-flowchart": "^1.4.3",
+    "vuepress-plugin-ribbon": "^1.0.0"
+  }
+}
