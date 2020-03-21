@@ -13,7 +13,7 @@ tags:
 publish: true
 ---
 
-#import Vue from 'vue'はなぜ使えるか？
+## import Vue from 'vue'はなぜ使えるか？
 Vuejs の開発の際、よく最初に出てくるこれ
 
 ```js
@@ -31,7 +31,7 @@ import Example from './Example.vue';
 
 少し研究してきたことをまとめてみた。
 
-##import とは
+## import とは
 Javascript のモジュールシステムです。他のファイルを使いたい時、`require` function で他のファイルの内容を引用する。
 `es6`を使っている時、`import`を`require`にコンパイルする。
 だから、実際に実行するコードは以下。
@@ -42,12 +42,12 @@ import Vue from 'vue';
 const Vue = require('vue')
 ```
 
-##nodejs 引用ルール
+## nodejs 引用ルール
 
 実は、nodejs の中に、`require`を使う時に、`require.reslove` function を使ってファイルのパスを探している。この function は優先順位は以下になる。
 `require(X) from module at path Y` 1.もし`X`はコアのパッケージかどうか、普段の`path`などみたいは直接引用される。ではなければ、次へ。 2.もし`X`は`/`から始めれば、`Y`のパスは OS の`root`と設定。ではなければ、次へ。 3.もし`X`は`./`,`/`,`../`から始めれば、`(Y + X)`ファイルかディレクトリ引用。ではなければ、次へ。 4.`node_modules`フォルダの中に、見つかる！
 
-##node_modules にある vue
+## node_modules にある vue
 `node_modules`に確かに`vue`というフォルダは存在しているが、`new Vue()`などの操作の時は、Js の Object として使っている。では、なぜか！
 真の犯人まではもう少し 🎭❗️
 `npm`のパッケージとして、内部の出力はまたルールがある！
@@ -74,7 +74,7 @@ const Vue = require('vue')
 
 ではでは、だんだん明らかになってきた ❗️
 
-##本当にいつも`import`したものは...
+## 本当にいつも`import`したものは...
 
 ```js
 import vue from 'vue';

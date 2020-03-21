@@ -1,7 +1,7 @@
 ---
 title: About Me!
 date: 2019-08-08
-sidebar: 'auto'
+sidebar: false
 categories:
   - life
 tags:
@@ -76,7 +76,7 @@ What I believe is
 I built a blog with Laravel and Vue [before](), the building experience is good but hard to maintain there.
 Hope I can keep update here😉
 :::
-<style lang="stylus">
+<style lang="stylus" module>
 img[alt~="Image-of-Me"] {
     width 400px
     box-shadow 0px 0px 6px 2px rgba(9, 9, 16, 0.2)

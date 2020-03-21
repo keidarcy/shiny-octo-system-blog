@@ -4,6 +4,13 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/images/favicon.ico' }],
     [
+      'link',
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Nunito&display=swap'
+      }
+    ],
+    [
       'meta',
       {
         name: 'viewport',
