@@ -62,13 +62,13 @@ module.exports = {
         text: 'Tag'
       }
     },
-    // vssueConfig: {
-    //   platform: 'github',
-    //   owner: 'xyyolab',
-    //   repo: 'blog',
-    //   clientId: '',
-    //   clientSecret: ''
-    // },
+    vssueConfig: {
+      platform: 'github',
+      owner: 'xyyolab',
+      repo: 'blog',
+      clientId: process.env.GithubId,
+      clientSecret: process.env.GithubSecret
+    },
     logo: '/images/self-round.png',
     noFoundPageByTencent: false,
     sidebar: 'auto',
