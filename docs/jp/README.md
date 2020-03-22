@@ -16,6 +16,7 @@ heroImageStyle:
 <script>
 export default {
   mounted() {
+  console.log(1)
   document.querySelector(
     'div.info-wrapper > div.personal-info-wrapper > div > div:nth-child(1) > h6'
   ).innerText = '記事';
