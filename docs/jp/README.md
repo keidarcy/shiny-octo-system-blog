@@ -14,9 +14,16 @@ heroImageStyle:
 ---
 
 <script>
-// import homeMixin from '../.vuepress/mixins/home'
-// const homeMixin = require('../.vuepress/mixins/home.js')
 export default {
-  // mixins: [homeMixin],
+  mounted() {
+  document.querySelector(
+    'div.info-wrapper > div.personal-info-wrapper > div > div:nth-child(1) > h6'
+  ).innerText = 'ポースト';
+  document.querySelector(
+    'div.info-wrapper > div.personal-info-wrapper > div > div:nth-child(2) > h6'
+  ).innerText = 'タグ';
+  document.querySelector('h4:nth-child(2)').innerText = 'カテゴリー';
+  document.querySelector('h4:nth-child(5)').innerText = 'タグ';
+  }
 }
 </script>

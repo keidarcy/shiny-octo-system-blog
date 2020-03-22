@@ -12,11 +12,3 @@ heroImageStyle:
     boxShadow: '0 5px 48px rgba(0,0,0,0.5)',
   }
 ---
-
-<script>
-// import homeMixin from '../.vuepress/mixins/home'
-// const homeMixin = require('../.vuepress/mixins/home.js')
-export default {
-  // mixins: [homeMixin],
-}
-</script>
