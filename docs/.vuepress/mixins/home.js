@@ -1,4 +1,4 @@
-import observer from '../helper/observer';
+const observer = require('../helper/observer');
 
 export default {
   mounted() {
