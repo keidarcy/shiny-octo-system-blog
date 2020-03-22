@@ -7,6 +7,7 @@ categories:
 tags:
   - whoami
 publish: true
+isShowComments: false
 ---
 
 ::: tip
@@ -76,6 +77,8 @@ What I believe is
 I built a blog with Laravel and Vue [before](), the building experience is good but hard to maintain there.
 Hope I can keep update here😉
 :::
+
+[qr-code](wechat)
 <style lang="stylus" module>
 img[alt~="Image-of-Me"] {
     width 400px

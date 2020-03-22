@@ -31,6 +31,7 @@ public function topics()
     return $this->hasMany(Topic::class, 'post_id');
 }
 ```
+
 Firstly, create factory normally like
 
 ```php
@@ -57,6 +58,7 @@ $factory->define(Post::class, function (Faker $faker) {
     ];
 });
 ```
+
 also similarly create `TopicFactory` and `TagFactory`
 
 ```php

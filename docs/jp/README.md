@@ -2,7 +2,7 @@
 home: true
 bgImage: 'images/banner.jpg'
 bgImageStyle: { display: inherit, height: '1000px' }
-heroImage: '/images/logo-without-background.png'
+heroImage: /images/logo-without-background.png
 heroImageStyle:
   {
     maxHeight: '230px',

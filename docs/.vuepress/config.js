@@ -1,6 +1,5 @@
+const themeConfig = require('./config/theme/');
 module.exports = {
-  theme: 'reco',
-  plugins: ['flowchart', 'ribbon'],
   head: [
     ['link', { rel: 'icon', href: '/images/favicon.ico' }],
     [
@@ -18,68 +17,28 @@ module.exports = {
       }
     ]
   ],
+  theme: 'reco',
+  plugins: ['flowchart', 'ribbon'],
+  markdown: {
+    lineNumbers: true
+  },
   title: 'xyyolab👨‍🔬🔥',
-  description: 'You REALLY CAN  do whatever you want',
-  themeConfig: {
-    type: 'blog',
-    authorAvatar: '/images/self-round.png',
-    nav: [
-      { text: 'Home', link: '/', icon: 'reco-home' },
-      { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
-      {
-        text: 'contact',
-        ariaLabel: 'contact',
-        icon: 'reco-message',
-        items: [
-          {
-            icon: 'reco-github',
-            text: 'GitHub',
-            link: 'https://github.com/xyyolab'
-          },
-          {
-            icon: 'reco-wechat',
-            text: 'wechat',
-            link: '/'
-          },
-          {
-            icon: 'reco-facebook',
-            text: 'facebook',
-            link: 'https://www.facebook.com/people/Xing-Yahao/100010633425743'
-          },
-          {
-            icon: 'reco-mail',
-            text: 'Gmail',
-            link: 'keidarcy.1015@gmail.com'
-          },
-          {
-            icon: 'reco-other',
-            text: 'about me',
-            link: '/about/'
-          }
-        ]
-      }
-    ],
-    blogConfig: {
-      category: {
-        location: 2,
-        text: 'Category'
-      },
-      tag: {
-        location: 3,
-        text: 'Tag'
-      }
+  locales: {
+    '/': {
+      lang: 'en-US',
+      description:
+        'We should consider every day lost on which we have not danced at least once 💃 !'
     },
-    vssueConfig: {
-      platform: 'github',
-      owner: 'xyyolab',
-      repo: 'blog',
-      clientId: process.env.VSSUEID,
-      clientSecret: process.env.VSSUESECRET
+    '/zh/': {
+      lang: 'zh-CN',
+      description: '每一个不曾起舞的日子，都是对生命的辜负 💃！'
     },
-    logo: '/images/self-round.png',
-    noFoundPageByTencent: false,
-    sidebar: 'auto',
-    sidebarDepth: 2,
-    lastUpdated: 'Last Updated'
-  }
+    '/jp/': {
+      lang: 'ja_JP',
+      description:
+        '私たち、一度でも踊っていない日は、彷徨っていると考えるべきだ 💃！'
+    }
+  },
+  themeConfig,
+  editLinks: true
 };
