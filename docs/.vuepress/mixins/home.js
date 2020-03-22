@@ -1,6 +1,6 @@
 const observer = require('../helper/observer');
 
-export default {
+module.exports = {
   mounted() {
     observer.observe(document.querySelector('.abstract-wrapper'));
     document.querySelector(
@@ -11,5 +11,9 @@ export default {
     ).innerText = 'tags';
     document.querySelector('h4:nth-child(2)').innerText = 'categories';
     document.querySelector('h4:nth-child(5)').innerText = 'tags';
+  },
+  updated() {
+    document.querySelector('.navbar').classList.remove('not-floating');
+    document.querySelector('.navbar').classList.remove('is-floating');
   }
 };

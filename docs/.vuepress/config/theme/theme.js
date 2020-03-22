@@ -27,5 +27,6 @@ module.exports = {
   lastUpdated: 'Last Updated',
   startYear: 2019,
   search: true,
+  smoothScroll: true,
   searchMaxSuggestions: 10
 };

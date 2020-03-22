@@ -14,7 +14,8 @@ heroImageStyle:
 ---
 
 <script>
-import homeMixin from './.vuepress/mixins/home'
+// import homeMixin from './.vuepress/mixins/home'
+const homeMixin = require('./.vuepress/mixins/home.js')
 export default {
   mixins: [homeMixin],
 }
