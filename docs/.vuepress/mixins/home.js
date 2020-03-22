@@ -1,8 +1,23 @@
-const observer = require('../helper/observer');
+// const observer = require('../helper/observer');
+const observer = new IntersectionObserver(
+  entries => {
+    if (entries[0].intersectionRatio >= 0.25) {
+      document.querySelector('.navbar').classList.add('is-floating');
+      document.querySelector('.navbar').classList.remove('not-floating');
+    } else {
+      document.querySelector('.navbar').classList.remove('is-floating');
+      document.querySelector('.navbar').classList.add('not-floating');
+    }
+  },
+  {
+    threshold: 0.25
+  }
+);
 
 module.exports = {
   mounted() {
     observer.observe(document.querySelector('.abstract-wrapper'));
+    observer.observe(document.querySelector('.page-title'));
     document.querySelector(
       'div.info-wrapper > div.personal-info-wrapper > div > div:nth-child(1) > h6'
     ).innerText = 'articals';
