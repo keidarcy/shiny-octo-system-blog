@@ -17,7 +17,7 @@ const observer = new IntersectionObserver(
 module.exports = {
   mounted() {
     observer.observe(document.querySelector('.abstract-wrapper'));
-    observer.observe(document.querySelector('.page-title'));
+    // observer.observe(document.querySelector('.page-title'));
     document.querySelector(
       'div.info-wrapper > div.personal-info-wrapper > div > div:nth-child(1) > h6'
     ).innerText = 'articals';
