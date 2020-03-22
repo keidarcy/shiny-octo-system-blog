@@ -16,8 +16,8 @@ const observer = new IntersectionObserver(
 
 module.exports = {
   mounted() {
-    observer.observe(document.querySelector('.abstract-wrapper'));
-    // observer.observe(document.querySelector('.page-title'));
+    document.querySelector('.navbar').classList.remove('not-floating');
+    document.querySelector('.navbar').classList.remove('is-floating');
     document.querySelector(
       'div.info-wrapper > div.personal-info-wrapper > div > div:nth-child(1) > h6'
     ).innerText = 'articals';
@@ -28,7 +28,6 @@ module.exports = {
     document.querySelector('h4:nth-child(5)').innerText = 'tags';
   },
   updated() {
-    document.querySelector('.navbar').classList.remove('not-floating');
-    document.querySelector('.navbar').classList.remove('is-floating');
+    observer.observe(document.querySelector('.abstract-wrapper'));
   }
 };
