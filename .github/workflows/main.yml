@@ -16,12 +16,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          VSSUEID: ${{ secrets.VSSUEID }}
-          VSSUESECRET: ${{ secrets.VSSUESECRET }}
           persist-credentials: false
 
       # build project
       - name: Build
+        env:
+          VSSUEID: ${{ secrets.VSSUEID }}
+          VSSUESECRET: ${{ secrets.VSSUESECRET }}
+        run: echo $VSSUEID
         run: npm install && npm run docs:build
 
       # deploy to Github Pages

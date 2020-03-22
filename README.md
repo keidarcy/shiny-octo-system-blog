@@ -1,7 +1,7 @@
 # My personal blog repository.
 boosted by [Vuepress](https://vuepress.vuejs.org/)
 
-## [View](https://xyyolab.com)
+## [View](https://blog.xyyolab.com)
 
 ## License
 
