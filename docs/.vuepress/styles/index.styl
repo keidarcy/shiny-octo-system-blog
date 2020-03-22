@@ -177,3 +177,28 @@ code
         -webkit-box-orient vertical
         -webkit-line-clamp 2
         overflow hidden
+
+@keyframes slide-nav-down 
+  100% 
+    transform: translateY(0);
+    
+  0%
+    transform: translateY(-100%)
+    
+
+
+@keyframes slide-nav-up
+  100%
+    transform translateY(-100%)
+  0%
+    transform translateY(0)
+
+.navbar.is-floating 
+    transform translateY(-100%)
+    animation slide-nav-down .3s ease 
+    animation-fill-mode forwards
+
+.navbar.not-floating 
+    transform translateY(-100%)
+    animation slide-nav-up .3s ease
+    animation-fill-mode forwards

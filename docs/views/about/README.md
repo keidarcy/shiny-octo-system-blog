@@ -14,7 +14,9 @@ isShowComments: false
 Hello World 🚀
 My name is Xing Yahao🤓
 :::
+
 <!-- more -->
+
 ::: details My photo 👾 WARNING ‼️👽
 ![Image-of-Me](/images/self-squar.png)
 :::
@@ -44,9 +46,9 @@ I will try to keep writing [posts](/) here, keep recording something.
 ::: details 日本語
 こんにちは！
 
-けいです。2015年に中国から京都で日本語を勉強。2017年に一橋大学経済学研究科に入学、2019年に修了。
+けいです。2015 年に中国から京都で日本語を勉強。2017 年に一橋大学経済学研究科に入学、2019 年に修了。
 
-その後、ITエンジニアになって、猛勉強した😂好きなことだから、大変と思わないかも。
+その後、IT エンジニアになって、猛勉強した 😂 好きなことだから、大変と思わないかも。
 
 時間あれば、この[ブログ](/)と[Qiita](https://qiita.com/xyyolab)を並行で更新したい！
 :::
@@ -55,10 +57,10 @@ I will try to keep writing [posts](/) here, keep recording something.
 I don't believe assess any other person with a word like `advanced`, `intermediate`, `beginner`.
 
 What I believe is
-> *talk is cheap show me the code*
->
->source [linus torvalds](https://en.wikiquote.org/wiki/Linus_Torvalds)
 
+> _talk is cheap show me the code_
+>
+> source [linus torvalds](https://en.wikiquote.org/wiki/Linus_Torvalds)
 
 | tool       | source   |
 | ---------- | -------- |
@@ -79,6 +81,7 @@ Hope I can keep update here😉
 :::
 
 [qr-code](wechat)
+
 <style lang="stylus" module>
 img[alt~="Image-of-Me"] {
     width 400px
