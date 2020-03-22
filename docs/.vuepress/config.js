@@ -27,16 +27,16 @@ module.exports = {
     '/': {
       lang: 'en-US',
       description:
-        'We should consider every day lost on which we have not danced at least once 💃 !'
+        'We should consider every day lost on which we have not danced at least once 💃'
     },
     '/zh/': {
       lang: 'zh-CN',
-      description: '每一个不曾起舞的日子，都是对生命的辜负 💃！'
+      description: '每一个不曾起舞的日子，都是对生命的辜负 💃'
     },
     '/jp/': {
       lang: 'ja-JP',
       description:
-        '私たち、一度でも踊っていない日は、彷徨っていると考えるべきだ 💃！'
+        '私たち、一度でも踊っていない日は、彷徨っていると考えるべきだ 💃'
     }
   },
   themeConfig,

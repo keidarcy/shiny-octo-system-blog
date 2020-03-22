@@ -14,7 +14,7 @@ module.exports = {
   '/jp/': {
     selectText: '言語',
     label: '日本語',
-    editLinkText: 'GitHub で編集',
+    // editLinkText: 'GitHub で編集',
     nav: nav.jp
   }
 };
