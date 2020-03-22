@@ -11,5 +11,6 @@ export default ({
 const myMixin = {
   mounted() {
     // console.log(1);
+    // document.querySelector('.navbar').classList.remove('not-floating');
   }
 };
