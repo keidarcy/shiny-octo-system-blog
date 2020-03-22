@@ -1,6 +1,6 @@
 ---
 title: A collection of userful Laravel tips
-date: 2020-03-21
+date: 2019-11-21
 sidebar: 'auto'
 categories:
   - technology
@@ -10,6 +10,8 @@ tags:
   - Laravel
   - English
 publish: true
+prev: 0006-laravel7-release
+next: 0008-useful-git-examples
 ---
 
 # Create fake data seeder with relationships
@@ -85,5 +87,3 @@ class PostsTableSeeder extends Seeder
     }
 }
 ```
----
-[explore more](how-to-create-laravel-facade.md)

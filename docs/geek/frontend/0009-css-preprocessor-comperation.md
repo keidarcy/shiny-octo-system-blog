@@ -9,6 +9,8 @@ tags:
   - css
   - Japanese
 publish: true
+prev: 0009-css-preprocessor-comperation
+next: false
 ---
 
 ## CSS プリプロセッサーとは

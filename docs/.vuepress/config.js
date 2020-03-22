@@ -79,6 +79,7 @@ module.exports = {
     logo: '/images/self-round.png',
     noFoundPageByTencent: false,
     sidebar: 'auto',
-    sidebarDepth: 2
+    sidebarDepth: 2,
+    lastUpdated: 'Last Updated'
   }
 };

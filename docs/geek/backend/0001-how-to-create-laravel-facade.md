@@ -1,6 +1,6 @@
 ---
 title: Understand Laravel Core Concepts 2 (create your own Facade 2 ways)
-date: 2020-01-01
+date: 2019-12-27
 sidebar: 'auto'
 categories:
   - geek
@@ -10,6 +10,8 @@ tags:
   - Laravel
   - English
 publish: true
+prev: 0000-how-laravel-facade-work
+next: 0002-how-collection-help-us
 ---
 
 ## How could we use facade class

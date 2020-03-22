@@ -1,6 +1,6 @@
 ---
-title: Understand Laravel Core Concepts 2 (create your own Facade 2 ways)
-date: 2020-01-01
+title: Understand Laravel Core Concepts 1 (How does facade work)
+date: 2019-12-25
 sidebar: 'auto'
 categories:
   - geek
@@ -10,6 +10,8 @@ tags:
   - Laravel
   - English
 publish: true
+prev: /about/
+next: 0001-how-to-create-laravel-facade
 ---
 
 ## First Create Facade Manually
@@ -95,6 +97,3 @@ class Payment extends Facade
 }
 ```
 there will be an almost same file with what we created before!
-
----
-[explore more](how-to-create-laravel-facade.md)

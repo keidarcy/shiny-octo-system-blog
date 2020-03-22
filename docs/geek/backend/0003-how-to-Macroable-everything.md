@@ -1,5 +1,5 @@
 ---
-title: Understand Laravel Core Concepts 3 (how collection help us)
+title: Understand Laravel Core Concepts 4 (how to macroable your idea)
 date: 2020-01-01
 sidebar: 'auto'
 categories:
@@ -10,6 +10,8 @@ tags:
   - Laravel
   - English
 publish: true
+prev: 0002-how-collection-help-us
+next: 0004-Japanese-random-word-generater
 ---
 
 ## Create our own collection from scratch
@@ -166,6 +168,3 @@ foreach(customRange(1,10000000) as $i {
 ```
 
 it won't build that array in memory, so it becomes possible.
-
----
-[explore more](how-to-create-laravel-facade.md)

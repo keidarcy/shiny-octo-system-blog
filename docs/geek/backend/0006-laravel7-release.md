@@ -10,6 +10,8 @@ tags:
   - Laravel
   - Japanese
 publish: true
+prev: 0005-laravel7-upgrade-guide
+next: 0007-useful-laravel-tips
 ---
 
 # Laravel 7 Release Notes

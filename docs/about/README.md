@@ -83,6 +83,3 @@ img[alt~="Image-of-Me"] {
     border-radius 5px
 }
 </style>
-
----
-[explore more](/)

@@ -11,6 +11,8 @@ tags:
   - Node.js
   - Japanese
 publish: true
+prev: false
+next: 0010-import-vue-from-vue
 ---
 
 ## import Vue from 'vue'はなぜ使えるか？

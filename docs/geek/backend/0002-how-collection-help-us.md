@@ -1,6 +1,6 @@
 ---
 title: Understand Laravel Core Concepts 3 (how collection help us)
-date: 2020-01-01
+date: 2019-12-31
 sidebar: 'auto'
 categories:
   - geek
@@ -10,6 +10,8 @@ tags:
   - Laravel
   - English
 publish: true
+prev: 0001-how-to-create-laravel-facade
+next: 0003-how-to-Macroable-everything
 ---
 
 ## Basic Usage of Macro
@@ -83,6 +85,3 @@ Route::get('/', function () {
 ```
 
 Take a look `vendor/laravel/framework/src/Illuminate/Support/Traits/Macroable.php`, it's exactly same with what we create !
-
----
-[explore more](/)

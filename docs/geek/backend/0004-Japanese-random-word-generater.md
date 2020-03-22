@@ -9,6 +9,8 @@ tags:
   - PHP
   - Japanese
 publish: true
+prev: 0003-how-to-Macroable-everything
+next: 0005-laravel7-upgrade-guide
 ---
 
 ::: tip

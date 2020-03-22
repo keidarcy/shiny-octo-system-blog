@@ -1,6 +1,6 @@
 ---
 title: Laravel 7 Upgrade Guide日本語訳
-date: 2020-02-20
+date: 2020-02-17
 sidebar: 'auto'
 categories:
   - geek
@@ -10,6 +10,8 @@ tags:
   - Laravel
   - Japanese
 publish: true
+prev: 0004-Japanese-random-word-generater
+next: 0006-laravel7-release
 ---
 
 ![1_GfmHsC_I5egGyPx1lvXR9Q.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/470919/fa9d54e6-ffd0-4779-9335-6ff93d7027ac.png)

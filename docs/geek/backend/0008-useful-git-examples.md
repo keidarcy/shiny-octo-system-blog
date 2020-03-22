@@ -1,6 +1,6 @@
 ---
 title: A collection of userful git tips
-date: 2020-03-21
+date: 2019-10-21
 sidebar: 'auto'
 categories:
   - technology
@@ -9,6 +9,8 @@ tags:
   - Git
   - English
 publish: true
+prev: 0007-useful-laravel-tips
+# next: ../frontend/0009-css-preprocessor-comperation
 ---
 
 ## git commit
@@ -73,9 +75,3 @@ if you want to 'reset' a wrong 'interactive rebasing' go
 
 ## git grep
 search a pattern in repo by grep command
-
-
-
-
----
-[explore more](how-to-create-laravel-facade.md)
