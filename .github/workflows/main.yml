@@ -20,11 +20,9 @@ jobs:
 
       # build project
       - name: Build
-        run: echo $VSSUEID
         env:
           VSSUEID: ${{ secrets.VSSUEID }}
           VSSUESECRET: ${{ secrets.vssuesecret }}
-        run: echo $VSSUEID
         run: npm install && npm run docs:build
 
       # deploy to Github Pages
