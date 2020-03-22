@@ -34,7 +34,7 @@ module.exports = {
       description: '每一个不曾起舞的日子，都是对生命的辜负 💃！'
     },
     '/jp/': {
-      lang: 'ja_JP',
+      lang: 'ja-JP',
       description:
         '私たち、一度でも踊っていない日は、彷徨っていると考えるべきだ 💃！'
     }
