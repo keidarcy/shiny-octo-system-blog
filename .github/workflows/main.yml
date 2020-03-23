@@ -8,7 +8,7 @@ on:
 
 # jobs to build and deploy
 jobs:
-  build-and-deploy:
+  build-and-deploy-blog-to-github-page:
     # server env: latest Ubuntu
     runs-on: ubuntu-latest
     steps:
@@ -21,7 +21,7 @@ jobs:
       - name: Pass Variables
         env:
           EXAMPLE: ${{ secrets.THIS_IS_A_EXAMPLE }}
-        run: echo $THIS_IS_A_EXAMPLE
+          EXAMPLE: ${{ secrets.NOT_EXIST }}
 
       # build project
       - name: Build
