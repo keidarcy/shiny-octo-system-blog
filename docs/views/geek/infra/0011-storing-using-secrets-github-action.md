@@ -12,7 +12,7 @@ publish: true
 prev: ../frontend/0010-import-vue-from-vue
 # next: ../frontend/0009-css-preprocessor-comperation
 ---
-
+。
 # 如何在 GitHub Actions 时使用 secretKey
 
 当我参考[这篇](https://www.lasy.site/views/%E5%89%8D%E7%AB%AF/%E4%BD%BF%E7%94%A8%20GitHub%20Actions%20%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2.html)，使用 `Github Action` 自动部署的时候发现要使用 Secret Key 去使用 `VSSUE` 评论功能，我就犯愁了。
@@ -54,16 +54,12 @@ with:
 
 在 `npm run build` 之前加上环境参数那一段。
 
-结果是评论功能可以使用了呀 😍
+结果是评论功能可以使用了呀 😍。
 
 ![Screenshot 2020-03-23 13.36.35.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/470919/0a508150-59e8-948c-4601-b57012db2ed6.png)
 
 - 完整的 `main.yaml` 请参考我的 [Github](https://github.com/xyyolab/blog/blob/master/.github/workflows/main.yml)
 
-看似简单但解决了大问题呢。
+看起来一个小步骤但解决了大问题呢 💃。
 
 首发于在下个人博客：[https://blog.xyyolab.com](https://blog.xyyolab.com)
-
-:::tip
-本文作者 [xyh](https://github.com/xyyolab)，博客 [xyh](https://blog.xyyolab.com)。
-:::
