@@ -8,7 +8,7 @@ module.exports = {
   },
   '/zh/': {
     selectText: '选择语言',
-    label: '简体中文',
+    label: '中文',
     nav: nav.zh
   },
   '/jp/': {
