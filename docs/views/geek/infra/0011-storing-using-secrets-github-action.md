@@ -28,6 +28,11 @@ with:
 
 - [Creating and storing encrypted secrets](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets)
 
+简单说就是在对应repo的 `Secrets` 区域里输入。再在 `actions` 里用 `${{ secrets.YOURKEY }}` 去取，通过 `env` 存入服务器的环境变量。就可以用啦 👻。
+
+![Screenshot 2020-03-23 13.08.05.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/470919/6d81c510-7f25-a039-5087-f07854d6d75e.png)
+
+
 做个实验。`main.yaml` 里加上这样一段。
 
 ```yaml
