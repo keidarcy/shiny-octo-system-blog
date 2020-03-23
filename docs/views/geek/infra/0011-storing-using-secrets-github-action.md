@@ -1,16 +1,17 @@
 ---
 title: 在使用 GitHub Actions 时 secretKey 的处理方法
-date: 2020-03-23
+date: 2020-03-22
 sidebar: false
 categories:
   - geek
-  - backend
+  - infra
 tags:
+  - Vuepress
   - Github
   - Chinese
 publish: true
 prev: ../frontend/0010-import-vue-from-vue
-# next: ../frontend/0009-css-preprocessor-comperation
+next: 0012-how-to-build-this-blog
 ---
 
 ## 如何在 GitHub Actions 时使用 secretKey
