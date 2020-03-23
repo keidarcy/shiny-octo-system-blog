@@ -1,21 +1,7 @@
 #!/usr/bin/env sh
-
-# abort on errors
-set -e
-
-# build
-npm run build
-
-# navigate into the build output directory
-cd docs/.vuepress/dist
-
-# if you are deploying to a custom domain
-echo 'blog.xyyolab.com' > CNAME
-
-git init
-git add -A
+git add .
 git commit -m 'deploy'
+git push
 
-git push -f git@github.com:xyyolab/blog.git master:gh-pages
-
-cd -
+echo 'https://blog.xyyolab.com'
+echo 'https://github.com/xyyolab/blog/actions'

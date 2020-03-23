@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 git add .
-git commit -m 'update'
+git commit -m 'content'
 git push
 
 echo 'https://blog.xyyolab.com'

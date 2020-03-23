@@ -3,7 +3,7 @@ title: Laravel 7 Release Notes日本語訳
 date: 2020-02-22
 sidebar: 'auto'
 categories:
-  - technology
+  - geek
   - backend
 tags:
   - PHP

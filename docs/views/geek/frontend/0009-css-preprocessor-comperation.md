@@ -9,8 +9,8 @@ tags:
   - css
   - Japanese
 publish: true
-prev: 0009-css-preprocessor-comperation
-next: false
+prev: ../backend/0008-css-preprocessor-comperation
+next: 0010-import-vue-from-vue
 ---
 
 ## CSS プリプロセッサーとは

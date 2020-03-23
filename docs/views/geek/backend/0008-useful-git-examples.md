@@ -3,7 +3,7 @@ title: A collection of userful git tips
 date: 2019-10-21
 sidebar: 'auto'
 categories:
-  - technology
+  - geek
   - backend
 tags:
   - Git

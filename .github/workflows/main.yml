@@ -18,12 +18,6 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Pass Variables
-        env:
-          EXAMPLE: ${{ secrets.THIS_IS_A_EXAMPLE }}
-          NOTEXIST: ${{ secrets.NOT_EXIST }}
-        run: echo 'try to show secret 😉' && echo $EXAMPLE && echo $NOT_EXIST
-
       # build project
       - name: Build
         env:

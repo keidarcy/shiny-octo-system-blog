@@ -7,8 +7,9 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "ghpage": "sh scripts/ghpage.sh",
     "deploy": "sh scripts/deploy.sh",
-    "push": "sh scripts/push.sh"
+    "content": "sh scripts/content.sh"
   },
   "keywords": [],
   "author": "",
