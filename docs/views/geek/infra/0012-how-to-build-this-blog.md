@@ -152,4 +152,4 @@ VuepressとQiitaのmarkdown文法は微秒な違いがある。今後もしQitta
 
 
 - [Github](https://github.com/xyyolab)
-- [ブログ](https://blog.xyyolab.com)。
+- [ブログ](https://blog.xyyolab.com)

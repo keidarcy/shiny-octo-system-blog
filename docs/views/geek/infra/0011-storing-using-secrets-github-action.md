@@ -53,6 +53,8 @@ ${{ secrets.YOURKEY }}
   run: echo 'try to show secret 😉' && echo $EXAMPLE && echo $NOT_EXIST
 ```
 
+~~不是 `A` 是 `AN`  难受😣~~
+
 输出这样的结果。github 把结果加密了，好像也看不出啥。那直接试试吧。
 
 ![Screenshot 2020-03-23 13.11.39.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/470919/e72b8478-89cb-6f45-f406-e6938f81e1c7.png)
@@ -91,4 +93,5 @@ ${{ secrets.YOURKEY }}
 看起来一个小步骤但解决了大问题呢 💃。
 
 ---
-首发于在下个人[博客](https://blog.xyyolab.com)
+- [Github](https://github.com/xyyolab)
+- [blog](https://blog.xyyolab.com)。
