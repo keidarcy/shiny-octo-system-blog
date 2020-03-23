@@ -21,7 +21,7 @@ jobs:
       - name: Pass Variables
         env:
           EXAMPLE: ${{ secrets.THIS_IS_A_EXAMPLE }}
-        run: $THIS_IS_A_EXAMPLE
+        run: echo $THIS_IS_A_EXAMPLE
 
       # build project
       - name: Build
