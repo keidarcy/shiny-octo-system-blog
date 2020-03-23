@@ -3,7 +3,7 @@ title: A collection of userful Laravel tips
 date: 2019-11-21
 sidebar: 'auto'
 categories:
-  - technology
+  - geek
   - backend
 tags:
   - PHP
