@@ -21,7 +21,7 @@ jobs:
       - name: Pass Variables
         env:
           EXAMPLE: ${{ secrets.THIS_IS_A_EXAMPLE }}
-          EXAMPLE: ${{ secrets.NOT_EXIST }}
+          NOTEXIST: ${{ secrets.NOT_EXIST }}
 
       # build project
       - name: Build
