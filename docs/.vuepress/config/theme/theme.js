@@ -24,11 +24,11 @@ module.exports = {
     appId: process.env.VALINE_ID,
     appKey: process.env.VALINE_KEY,
     lang: 'en',
-    placeholder: 'Get mail notification if you add E-Mail when I replied👻',
+    placeholder: 'Get mail notification if you add E-Mail when I replied👻'
     // verify: true,
-    visitor: true,
-    notify: true,
-    recordIP: true
+    // visitor: true,
+    // notify: true,
+    // recordIP: true
   },
   repo: 'xyyolab/blog',
   logo: '/images/self-round.png',
