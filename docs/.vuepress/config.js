@@ -20,7 +20,7 @@ module.exports = {
   theme: 'reco',
   plugins: ['flowchart', 'ribbon'],
   markdown: {
-    lineNumbers: true
+    // lineNumbers: true
   },
   title: 'xyyolab👨‍🔬🔥',
   locales: {

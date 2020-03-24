@@ -66,7 +66,7 @@ workflowを書く
 
 `Vussue`というgithub issue連携のコメントサービスも使うことに、`Vussue`のkeyも保存。
 
-```yaml:main.yml
+```yaml
 name: Deploy GitHub Pages
 
 # once pushed to master branch

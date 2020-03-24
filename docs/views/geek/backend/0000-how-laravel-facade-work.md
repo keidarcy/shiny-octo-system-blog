@@ -10,7 +10,7 @@ tags:
   - Laravel
   - English
 publish: true
-prev: /about/
+prev: /views/about/
 next: 0001-how-to-create-laravel-facade
 ---
 

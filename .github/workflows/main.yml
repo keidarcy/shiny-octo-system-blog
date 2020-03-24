@@ -21,8 +21,8 @@ jobs:
       # build project
       - name: Build
         env:
-          VSSUEID: ${{ secrets.VSSUEID }}
-          VSSUESECRET: ${{ secrets.VSSUESECRET }}
+          VALINE_ID: ${{ secrets.VALINE_ID }}
+          VALINE_KEY: ${{ secrets.VALINE_KEY }}
         run: npm install && npm run build
 
       # deploy to Github Pages
