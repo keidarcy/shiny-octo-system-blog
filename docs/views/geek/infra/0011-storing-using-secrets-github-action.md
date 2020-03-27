@@ -33,14 +33,24 @@ with:
 
 - [Creating and storing encrypted secrets](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets)
 
-简单说就是在对应repo的 `Secrets` 区域里输入。
+简单说就是在对应 repo 的 `Secrets` 区域里输入。
 
 ![Screenshot 2020-03-23 13.08.05.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/470919/6d81c510-7f25-a039-5087-f07854d6d75e.png)
 
+**注意 ⚠️**：上图中画圈的位置的 `A`, 正确的英语语法是 `AN`, 不过这篇教程统一用 `A`, 和下面的
+::: v-pre
+\${{ secrets.THIS_IS_A_EXAMPLE }}
+:::
+也得一致!
+
+~~英语好的朋友别嘲讽在下 😵~~
+
 再在 `actions` 里用
+
 ```
 ${{ secrets.YOURKEY }}
 ```
+
 去取，通过 `env` 存入服务器的环境变量。就可以用啦 👻。
 
 做个实验。`main.yaml` 里加上这样一段。
@@ -53,9 +63,7 @@ ${{ secrets.YOURKEY }}
   run: echo 'try to show secret 😉' && echo $EXAMPLE && echo $NOT_EXIST
 ```
 
-~~不是 `A` 是 `AN`  难受😣~~
-
-输出这样的结果。github 把结果加密了，好像也看不出啥。那直接试试吧。
+输出下图这样的结果。github 把结果加密了，不过可以发现，有设置的 `THIS_IS_A_EXAMPLE` 和没有设置的 `NOT_EXIST`，`echo` 出来是不一样的。由此可见，已经设置成功了。
 
 ![Screenshot 2020-03-23 13.11.39.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/470919/e72b8478-89cb-6f45-f406-e6938f81e1c7.png)
 
@@ -82,7 +90,8 @@ ${{ secrets.YOURKEY }}
     clientSecret: process.env.VSSUESECRET
   }
 ```
-再在 `config` 内用 node 的语法去环境参数取就OK啦！
+
+再在 `config` 内用 node 的语法去环境参数取就 OK 啦！
 
 结果是评论功能可以使用了呀 😍。
 
@@ -93,5 +102,6 @@ ${{ secrets.YOURKEY }}
 看起来一个小步骤但解决了大问题呢 💃。
 
 ---
+
 - [Github](https://github.com/xyyolab)
 - [blog](https://blog.xyyolab.com)。

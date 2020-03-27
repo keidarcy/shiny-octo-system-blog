@@ -2,12 +2,14 @@
 title: About Me!
 date: 2019-08-08
 sidebar: false
+navbar: false
 categories:
   - life
 tags:
   - whoami
 publish: true
 isShowComments: false
+permalink: /me
 ---
 
 ::: tip

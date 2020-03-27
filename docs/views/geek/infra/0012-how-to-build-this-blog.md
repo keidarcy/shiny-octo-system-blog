@@ -11,7 +11,7 @@ tags:
   - Japanese
 publish: true
 prev: 0011-storing-using-secrets-github-action
-# next: ../frontend/0009-css-preprocessor-comperation
+next: ../frontend/0013-japanese-programmer-english-pronunciation
 ---
 
 ## はじめに

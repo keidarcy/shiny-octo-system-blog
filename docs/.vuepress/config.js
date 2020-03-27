@@ -22,6 +22,7 @@ module.exports = {
   markdown: {
     // lineNumbers: true
   },
+  permalink: '/:year/:month/:day/:slug',
   title: 'xyyolab👨‍🔬🔥',
   locales: {
     '/': {

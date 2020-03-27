@@ -11,4 +11,5 @@ heroImageStyle:
     borderRadius: '20%',
     boxShadow: '0 5px 48px rgba(0,0,0,0.5)',
   }
+permalink: /
 ---

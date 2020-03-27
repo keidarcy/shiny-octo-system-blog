@@ -30,7 +30,7 @@ module.exports = {
   //   // notify: true,
   //   // recordIP: true
   // },
-  repo: 'xyyolab/blog',
+  // repo: 'xyyolab/blog',  single github link right side
   logo: '/images/self-round.png',
   noFoundPageByTencent: false,
   sidebar: 'auto',

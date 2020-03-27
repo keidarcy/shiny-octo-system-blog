@@ -1,5 +1,5 @@
 ---
-title: closer
+title: pull m clsr
 date: 2015-10-06
 sidebar: false
 navbar: false
@@ -9,6 +9,7 @@ tags:
   - whoami
 publish: true
 isShowComments: false
+permalink: /closer
 ---
 
 
