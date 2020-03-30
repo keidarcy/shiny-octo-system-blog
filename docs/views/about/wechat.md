@@ -12,15 +12,13 @@ isShowComments: false
 permalink: /closer
 ---
 
-
 ::: warning
 ::: danger
 ::: details Contact me ❓ 👾 WARNING 👽 better not 😏
 ![wechat-qr-code](/images/wechat.png)
 
-
-
 Tell me WHAT bring you here❓🤔
 :::
 
 [run](/)
+<Disqus/>

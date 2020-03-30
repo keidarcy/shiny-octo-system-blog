@@ -18,7 +18,12 @@ module.exports = {
     ]
   ],
   theme: 'reco',
-  plugins: ['flowchart', 'ribbon'],
+  plugins: [
+    'flowchart',
+    'ribbon',
+    ['disqus', { shortname: 'nice' }],
+    ['vuepress-plugin-code-copy', true]
+  ],
   markdown: {
     // lineNumbers: true
   },

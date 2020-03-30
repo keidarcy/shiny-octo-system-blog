@@ -8,4 +8,4 @@ boosted by [Vuepress](https://vuepress.vuejs.org/)
 This is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ---
-[Unmaintaned site](/)
+[Unmaintaned site](https://cyan.xyyolab.com/)

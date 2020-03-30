@@ -7820,6 +7820,11 @@ vue-click-outside@1.0.7:
   resolved "https://registry.yarnpkg.com/vue-click-outside/-/vue-click-outside-1.0.7.tgz#cdd2b1605e3c4944784e1794eae4a12a0f700bd6"
   integrity sha1-zdKxYF48SUR4TheU6uShKg9wC9Y=
 
+vue-disqus@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/vue-disqus/-/vue-disqus-3.0.5.tgz#8d0dd5cabdba7c47f82d129d2907a64366842fa8"
+  integrity sha512-T3Y68lXf5W2lYt6j4Y3kZ4opLPH0EAzqriy11MS4D4Q2+UN0tFuUXeYP1MxfvdyaCEboXSM6CUswxsULuNV70Q==
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
@@ -7911,12 +7916,24 @@ vuepress-html-webpack-plugin@^3.2.0:
     toposort "^1.0.0"
     util.promisify "1.0.0"
 
+vuepress-plugin-code-copy@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-code-copy/-/vuepress-plugin-code-copy-1.0.6.tgz#6431dab764b48b5b203e4936d98b1943651ce4ad"
+  integrity sha512-FiqwMtlb4rEsOI56O6sSkekcd3SlESxbkR2IaTIQxsMOMoalKfW5R9WlR1Pjm10v6jmU661Ex8MR11k9IzrNUg==
+
 vuepress-plugin-container@^2.0.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/vuepress-plugin-container/-/vuepress-plugin-container-2.1.2.tgz#688c1e5a9709a1b8658605bcaee580b3abb19d16"
   integrity sha512-Df5KoIDMYiFg45GTfFw2hIiLGSsjhms4f3ppl2UIBf5nWMxi2lfifcoo8MooMSfxboxRZjoDccqQfu0fypaKrQ==
   dependencies:
     markdown-it-container "^2.0.0"
+
+vuepress-plugin-disqus@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-disqus/-/vuepress-plugin-disqus-0.2.0.tgz#0a5bde424f81e0185eda36fba23d7ac4cae6ff07"
+  integrity sha512-kx+AeVzjJ9lx9bufLt1/X35V1VXfnQ1srkDMIzFKD9NyQ3eycsWQRcGO1dFe1HMrY3+7fTu+1/JeUEUEpGZ5tw==
+  dependencies:
+    vue-disqus "^3.0.5"
 
 vuepress-plugin-flowchart@^1.4.3:
   version "1.4.3"
