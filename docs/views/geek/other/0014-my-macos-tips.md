@@ -1,8 +1,8 @@
 ---
-title: Some osx tips
+title: Some mac tips
 date: 2020-03-28
 sidebar: false
-navbar: false
+navbar: true
 categories:
   - geek
   - other
@@ -11,12 +11,10 @@ tags:
   - English
 publish: true
 isShowComments: false
+permalink: /mac
 # prev: ../infra/0012-how-to-build-this-blog
 # next: 0011-storing-using-secrets-github-action
 ---
-
-
-
 
 ## get HOSTNAME with scutil
 

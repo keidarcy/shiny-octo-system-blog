@@ -1,7 +1,7 @@
 const themeConfig = require('./config/theme/');
 module.exports = {
   head: [
-    ['link', { rel: 'icon', href: '/images/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/icons/favicon.ico' }],
     [
       'link',
       {
@@ -15,14 +15,42 @@ module.exports = {
         name: 'viewport',
         content: 'width=device-width,initial-scale=1,user-scalable=no'
       }
-    ]
+    ],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    [
+      'meta',
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }
+    ],
+    [
+      'link',
+      { rel: 'apple-touch-icon', href: '/icons/apple-icon-152x152.png' }
+    ],
+    [
+      'link',
+      {
+        rel: 'mask-icon',
+        href: '/icons/apple-icon-152x152.png',
+        color: '#3eaf7c'
+      }
+    ],
+    [
+      'meta',
+      {
+        name: 'msapplication-TileImage',
+        content: '/icons/apple-icon-144x144.png'
+      }
+    ],
+    ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
   theme: 'reco',
   plugins: [
     'flowchart',
     'ribbon',
     ['disqus', { shortname: 'nice' }],
-    ['vuepress-plugin-code-copy', true]
+    ['vuepress-plugin-code-copy', true],
+    ['@vuepress/pwa']
   ],
   markdown: {
     // lineNumbers: true
