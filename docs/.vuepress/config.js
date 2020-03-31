@@ -16,6 +16,10 @@ module.exports = {
         content: 'width=device-width,initial-scale=1,user-scalable=no'
       }
     ],
+    [
+      'meta',
+      { property: 'og:image', content: '/icons/apple-icon-152x152.png' }
+    ],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
@@ -50,7 +54,13 @@ module.exports = {
     'ribbon',
     ['disqus', { shortname: 'nice' }],
     ['vuepress-plugin-code-copy', true],
-    ['@vuepress/pwa']
+    [
+      '@vuepress/pwa',
+      {
+        serviceWorker: true,
+        updatePopup: true
+      }
+    ]
   ],
   markdown: {
     // lineNumbers: true
