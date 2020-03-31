@@ -62,6 +62,9 @@ module.exports = {
       }
     ]
   ],
+  serviceWorker: {
+    updatePopup: true
+  },
   markdown: {
     // lineNumbers: true
   },
