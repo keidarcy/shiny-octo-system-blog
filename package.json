@@ -23,6 +23,7 @@
     "@vuepress/plugin-pwa": "^1.4.0",
     "vuepress-plugin-disqus": "^0.2.0",
     "vuepress-plugin-flowchart": "^1.4.3",
+    "vuepress-plugin-livere": "^1.0.1",
     "vuepress-plugin-ribbon": "^1.0.0"
   }
 }

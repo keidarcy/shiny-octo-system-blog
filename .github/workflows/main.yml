@@ -25,6 +25,7 @@ jobs:
           VALINE_KEY: ${{ secrets.VALINE_KEY }}
           VSSUEID: ${{ secrets.VSSUEID }}
           VSSUESECRET: ${{ secrets.VSSUESECRET }}
+          LIVERE_UID: ${{ secrets.LIVERE_UID }}
         run: npm install && npm run build
 
       # deploy to Github Pages

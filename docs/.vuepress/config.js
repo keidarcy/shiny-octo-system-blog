@@ -29,10 +29,10 @@ module.exports = {
     ['disqus', { shortname: 'nice' }],
     ['vuepress-plugin-code-copy', true],
     [
-      '@vuepress/pwa',
+      'livere',
       {
-        serviceWorker: true,
-        updatePopup: true
+        LIVERE_UID: process.env.LIVERE_UID,
+        LIVERE_URL: 'https://blog.xyyolab.com'
       }
     ]
   ],
