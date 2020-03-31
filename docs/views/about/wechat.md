@@ -21,4 +21,5 @@ Tell me WHAT bring you here❓🤔
 :::
 
 [run](/)
-<Disqus/>
+
+<!-- <Disqus/> -->
