@@ -19,7 +19,7 @@ export default {
   mounted() {
   document.querySelector(
     'div.info-wrapper > div.personal-info-wrapper > div > div:nth-child(1) > h6'
-  ).innerText = 'articals';
+  ).innerText = 'articles';
   document.querySelector(
     'div.info-wrapper > div.personal-info-wrapper > div > div:nth-child(2) > h6'
   ).innerText = 'tags';
