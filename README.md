@@ -3,9 +3,12 @@ boosted by [Vuepress](https://vuepress.vuejs.org/)
 
 ## [View](https://blog.xyyolab.com)
 
+## Thanks
+ - [vuepress-theme-reco](https://github.com/vuepress-reco/vuepress-theme-reco)
+
 ## License
 
 This is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ---
-[Unmaintaned site](https://cyan.xyyolab.com/)
+[Unmaintained site](https://cyan.xyyolab.com/)
