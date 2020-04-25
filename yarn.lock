@@ -8071,10 +8071,10 @@ vuepress-plugin-flowchart@^1.4.3:
   dependencies:
     flowchart.js "^1.11.3"
 
-vuepress-plugin-livere@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-livere/-/vuepress-plugin-livere-1.0.0.tgz#0d93aa604411cd5b6c37728fe3aad93f41d0ee57"
-  integrity sha512-8N8eri8PVnSh2ICvBblkDe7vc33dYFbwf5/W01I6yfdjgFW86D8+UXUNcVs1ek5nEQVqz+yBsqMyiKF97j/qFg==
+vuepress-plugin-livere@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-livere/-/vuepress-plugin-livere-1.0.1.tgz#4409adf35d00e8221bc13ae683c71c7afef8f1cb"
+  integrity sha512-YmhQlWvppx2rsw4g9CdiDflXdrVGGEDscJW1Iup/ptNAMoMmSXjama3rYlWpIqKBLSMx5RNG9QYtuJOTfPEQqw==
 
 vuepress-plugin-ribbon@^1.0.0:
   version "1.0.0"
