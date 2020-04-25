@@ -41,6 +41,9 @@ HostName: not set
 
 ```bash
 sudo xattr -r -d com.apple.quarantine
+
+// example
+sudo xattr -r -d com.apple.quarantine /Applications/Dash.app
 ```
 
 ## show full path in finder
