@@ -7,7 +7,7 @@ categories:
   - frontend
 sticky: 1
 tags:
-  - Vue.jsg
+  - Vue.js
   - Node.js
   - Japanese
 publish: true

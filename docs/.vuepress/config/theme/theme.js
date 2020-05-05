@@ -25,10 +25,6 @@ module.exports = {
   //   appKey: process.env.VALINE_KEY,
   //   lang: 'en',
   //   placeholder: 'Get mail notification if you add E-Mail when I replied👻'
-  //   // verify: true,
-  //   // visitor: true,
-  //   // notify: true,
-  //   // recordIP: true
   // },
   // repo: 'xyyolab/blog',  single github link right side
   logo: '/images/self-round.png',
@@ -40,4 +36,4 @@ module.exports = {
   search: true,
   smoothScroll: true,
   searchMaxSuggestions: 10
-};
+}
