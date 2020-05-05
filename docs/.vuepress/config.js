@@ -1,4 +1,4 @@
-const themeConfig = require('./config/theme/');
+const themeConfig = require('./config/theme/')
 module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/icons/favicon.ico' }],
@@ -56,8 +56,11 @@ module.exports = {
       lang: 'ja-JP',
       description:
         '私たち、一度でも踊っていない日は、彷徨っていると考えるべきだ 💃'
+    },
+    '/ko/': {
+      lang: 'ko-KR'
     }
   },
   themeConfig,
   editLinks: true
-};
+}
