@@ -9,8 +9,8 @@ sticky: 1
 tags:
   - react
 publish: true
-prev: /mac/#get-hostname-with-scutil
-# next: ../infra/0011-storing-using-secrets-github-action
+# prev: /mac/#get-hostname-with-scutil
+next: ./0017-create-react-copyn
 ---
 
 ## 关于 React useState Hook 的疑问
