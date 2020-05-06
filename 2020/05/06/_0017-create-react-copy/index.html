@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>10分钟写一个有useState和useEffect的简易版 React | xyyolab👨‍🔬🔥</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/icons/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito&amp;display=swap">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="description" content="We should consider every day lost on which we have not danced at least once 💃">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta property="og:image" content="/icons/apple-icon-152x152.png">
+    <link rel="preload" href="/assets/css/0.styles.7d2386b0.css" as="style"><link rel="preload" href="/assets/js/app.568d1889.js" as="script"><link rel="preload" href="/assets/js/4.064ee4a6.js" as="script"><link rel="preload" href="/assets/js/1.0421326c.js" as="script"><link rel="preload" href="/assets/js/28.6a3ee53b.js" as="script"><link rel="prefetch" href="/assets/js/10.67bddb2c.js"><link rel="prefetch" href="/assets/js/11.79b6e2cf.js"><link rel="prefetch" href="/assets/js/12.3cad8ab0.js"><link rel="prefetch" href="/assets/js/13.f0a163e8.js"><link rel="prefetch" href="/assets/js/14.dc981ba7.js"><link rel="prefetch" href="/assets/js/15.6e2d1c01.js"><link rel="prefetch" href="/assets/js/16.e7d99fac.js"><link rel="prefetch" href="/assets/js/17.2d8f9f22.js"><link rel="prefetch" href="/assets/js/18.7a43ac84.js"><link rel="prefetch" href="/assets/js/19.bf9b0f8a.js"><link rel="prefetch" href="/assets/js/20.9de4b3a7.js"><link rel="prefetch" href="/assets/js/21.62007507.js"><link rel="prefetch" href="/assets/js/22.c561f0af.js"><link rel="prefetch" href="/assets/js/23.29a3e165.js"><link rel="prefetch" href="/assets/js/24.2e63cd63.js"><link rel="prefetch" href="/assets/js/25.110e674d.js"><link rel="prefetch" href="/assets/js/26.7aa4b326.js"><link rel="prefetch" href="/assets/js/27.930ec763.js"><link rel="prefetch" href="/assets/js/29.87e403b2.js"><link rel="prefetch" href="/assets/js/30.b897dc83.js"><link rel="prefetch" href="/assets/js/31.973a77e4.js"><link rel="prefetch" href="/assets/js/32.5335dca8.js"><link rel="prefetch" href="/assets/js/33.166c19ee.js"><link rel="prefetch" href="/assets/js/34.ba4d3ef2.js"><link rel="prefetch" href="/assets/js/35.fcb47915.js"><link rel="prefetch" href="/assets/js/5.2ec104c1.js"><link rel="prefetch" href="/assets/js/6.2873be09.js"><link rel="prefetch" href="/assets/js/7.85acfce7.js"><link rel="prefetch" href="/assets/js/8.3e97320c.js"><link rel="prefetch" href="/assets/js/9.7927789e.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.b2e1aef9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7d2386b0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-19557b78><div data-v-19557b78><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-19557b78 data-v-19557b78><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-19557b78 data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>xyyolab👨‍🔬🔥</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>xyh 🐸</span>
+            
+          <span data-v-64685f0e>2019 - </span>
+          2020
+        </a></span></div></div> <div class="hide" data-v-19557b78><header class="navbar" data-v-19557b78><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/self-round.png" alt="xyyolab👨‍🔬🔥" class="logo"> <span class="site-name">xyyolab👨‍🔬🔥</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="https://github.com/xyyolab" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/views/about/wechat.html" class="nav-link"><i class="iconfont reco-wechat"></i>
+  wechat
+</a></li><li class="dropdown-item"><!----> <a href="https://www.facebook.com/people/Xing-Yahao/100010633425743" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-facebook"></i>
+  facebook
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/views/about/" class="nav-link"><i class="iconfont reco-other"></i>
+  about me
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      Languages
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/2020/05/06/_0017-create-react-copy/" class="nav-link router-link-exact-active router-link-active"><i class="iconfont undefined"></i>
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/" class="nav-link"><i class="iconfont undefined"></i>
+  中文
+</a></li><li class="dropdown-item"><!----> <a href="/jp/" class="nav-link"><i class="iconfont undefined"></i>
+  日本語
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-19557b78></div> <aside class="sidebar" data-v-19557b78><div class="personal-info-wrapper" data-v-b038cec6><img src="/images/self-round.png" alt="author-avatar" class="personal-img" data-v-b038cec6> <h3 class="name" data-v-b038cec6>
+    xyh 🐸
+  </h3> <div class="num" data-v-b038cec6><div data-v-b038cec6><h3 data-v-b038cec6>18</h3> <h6 data-v-b038cec6>Article</h6></div> <div data-v-b038cec6><h3 data-v-b038cec6>14</h3> <h6 data-v-b038cec6>Tag</h6></div></div> <hr data-v-b038cec6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="https://github.com/xyyolab" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/views/about/wechat.html" class="nav-link"><i class="iconfont reco-wechat"></i>
+  wechat
+</a></li><li class="dropdown-item"><!----> <a href="https://www.facebook.com/people/Xing-Yahao/100010633425743" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-facebook"></i>
+  facebook
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/views/about/" class="nav-link"><i class="iconfont reco-other"></i>
+  about me
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      Languages
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/2020/05/06/_0017-create-react-copy/" class="nav-link router-link-exact-active router-link-active"><i class="iconfont undefined"></i>
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/" class="nav-link"><i class="iconfont undefined"></i>
+  中文
+</a></li><li class="dropdown-item"><!----> <a href="/jp/" class="nav-link"><i class="iconfont undefined"></i>
+  日本語
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>10分钟写一个有useState和useEffect的简易版 React</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/2020/05/06/_0017-create-react-copy/#简易版-react-包括了什么" class="sidebar-link">简易版 React 包括了什么</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/2020/05/06/_0017-create-react-copy/#重现-usestate-以及在命令行中模仿浏览器的行为" class="sidebar-link">重现 useState 以及在命令行中模仿浏览器的行为</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/2020/05/06/_0017-create-react-copy/#实现-useeffect" class="sidebar-link">实现 useEffect</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>10分钟写一个有useState和useEffect的简易版 React</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>xyh 🐸</span>
+            
+          <span data-v-64685f0e>2019 - </span>
+          2020
+        </a></span></div></div> <div data-v-19557b78><main class="page"><div class="page-title" style="display:none;"><h1>10分钟写一个有useState和useEffect的简易版 React</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>xyh 🐸</span></i> <i class="iconfont reco-date" data-v-484a899e><span data-v-484a899e>2020-05-06</span></i> <!----> <i class="iconfont reco-tag tags" data-v-484a899e><span class="tag-item" data-v-484a899e>
+      react
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="简易版-react-包括了什么"><a href="#简易版-react-包括了什么" class="header-anchor">#</a> 简易版 React 包括了什么</h2> <p>模仿 React Hook 的 <code>useState</code> 和  <code>useEffect</code> 的功能，可以操作数据。但不涉及关于 <code>dom</code> 的操作，所以整个模拟会在命令行中模拟。</p> <h2 id="重现-usestate-以及在命令行中模仿浏览器的行为"><a href="#重现-usestate-以及在命令行中模仿浏览器的行为" class="header-anchor">#</a> 重现 <code>useState</code> 以及在命令行中模仿浏览器的行为</h2> <p>这里主要是功能上模仿上一篇文章，加上封装进 <code>React</code> 显得看起来更像 <code>React</code> , 由于大部分主要思想是相同的，所以只做简要说明。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">MyReact</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>hooks <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>idx <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">useState</span><span class="token punctuation">(</span><span class="token parameter">initVal</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> _idx <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>idx
+    <span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>hooks<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>idx<span class="token punctuation">]</span> <span class="token operator">||</span> initVal
+
+    <span class="token keyword">const</span> <span class="token function-variable function">setState</span> <span class="token operator">=</span> <span class="token parameter">newVal</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>hooks<span class="token punctuation">[</span>_idx<span class="token punctuation">]</span> <span class="token operator">=</span> newVal
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>idx<span class="token operator">++</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>state<span class="token punctuation">,</span> setState<span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>这里因为没有 <code>dom</code> ，所以在 <code>Component</code> 里面模仿 <code>render</code> 方程和 <code>click</code> event。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> React <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyReact</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Component</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>counter<span class="token punctuation">,</span> setCounter<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>text<span class="token punctuation">,</span> setText<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">'longdd'</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">render</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">{</span> text<span class="token punctuation">,</span> counter <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">click</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setCounter</span><span class="token punctuation">(</span>counter <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">type</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setText</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>render</code> 方程也在 <code>MyReact</code> 里面模仿出来。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">MyReact</span> <span class="token punctuation">{</span>
+  <span class="token comment">// constructor 就不重新写啦</span>
+  <span class="token operator">...</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token parameter">Component</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>_idx <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">const</span> _C <span class="token operator">=</span> <span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    _C<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> _C
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>最后模仿 <code>ReactDOM</code> ，并模仿点击事件。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> app <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>Component<span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+app <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>Component<span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token function">type</span><span class="token punctuation">(</span><span class="token string">'yyf'</span><span class="token punctuation">)</span>
+React<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>Component<span class="token punctuation">)</span>
+</code></pre></div><p>到这里其实已经可以完整的模仿 <code>React</code> 在浏览器中的作用啦。</p> <details class="custom-block details"><summary>完整的代码</summary> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token keyword">class</span> <span class="token class-name">MyReact</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>hooks <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>idx <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">useState</span><span class="token punctuation">(</span><span class="token parameter">initVal</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> _idx <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>idx
+    <span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>hooks<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>idx<span class="token punctuation">]</span> <span class="token operator">||</span> initVal
+
+    <span class="token keyword">const</span> <span class="token function-variable function">setState</span> <span class="token operator">=</span> <span class="token parameter">newVal</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>hooks<span class="token punctuation">[</span>_idx<span class="token punctuation">]</span> <span class="token operator">=</span> newVal
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>idx<span class="token operator">++</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>state<span class="token punctuation">,</span> setState<span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token parameter">Component</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>idx <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">const</span> _C <span class="token operator">=</span> Component
+    _C<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> _C
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> React <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyReact</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Component</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>counter<span class="token punctuation">,</span> setCounter<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>text<span class="token punctuation">,</span> setText<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">'longdd'</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">render</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">{</span> text<span class="token punctuation">,</span> counter <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">click</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setCounter</span><span class="token punctuation">(</span>counter <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">type</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setText</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> app <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>Component<span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+app <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>Component<span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token function">type</span><span class="token punctuation">(</span><span class="token string">'yyf'</span><span class="token punctuation">)</span>
+React<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>Component<span class="token punctuation">)</span>
+</code></pre></div></details> <h2 id="实现-useeffect"><a href="#实现-useeffect" class="header-anchor">#</a> 实现 <code>useEffect</code></h2> <p><code>useEffect</code> Hook 的功能其实就是，在 <code>Component</code> 初始化以及有依赖(dependency)的变量变动时执行的方程。
+所以我们就简单的执行一个 <code>console.log()</code> 啦！</p> <p>从一般的 <code>useEffect</code> 用法开始考虑如何导入</p> <div class="language-js extra-class"><pre class="language-js"><code>React<span class="token punctuation">.</span><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'excuted in useEffect hooook'</span><span class="token punctuation">)</span>
+  <span class="token comment">// 依赖有可能是 ['counter'] 或 ['text'] 或 ['counter', 'text']</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre></div><p>从结果来考虑需要的变量一个callback function <code>callback</code> 和依赖的数组 <code>depArray</code> 。</p> <p>以及在比较依赖有没有改变时肯定就要导入 <code>oldDep</code> 和 <code>hasChanged</code> 用来比较。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">MyReact</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">,</span>
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token parameter">callback<span class="token punctuation">,</span> depArray</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> oldDeps <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>hooks<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>idx<span class="token punctuation">]</span>
+    <span class="token keyword">let</span> hasChanged <span class="token operator">=</span> <span class="token boolean">true</span>
+    <span class="token comment">// 判断是否有变化</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>hasChanged<span class="token punctuation">)</span> <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>hooks<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>idx<span class="token punctuation">]</span> <span class="token operator">=</span> depArray
+    <span class="token keyword">this</span><span class="token punctuation">.</span>idx<span class="token operator">++</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>最后就是除了初始化的第一次，想办法判断 <code>oldDeps</code> 和 <code>depArray</code> 的值是否有变化有的话就执行 <code>callback()</code>, 这并不难但是以下可以简洁的写出</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">...</span>
+hasChanged <span class="token operator">=</span> oldDeps<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">dep<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">!</span>Object<span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span>depArray<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">,</span> dep<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><p>那么完整的 <code>useEffect</code> 就像这样</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token parameter">callback<span class="token punctuation">,</span> depArray</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> oldDeps <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>hooks<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>idx<span class="token punctuation">]</span>
+  <span class="token keyword">let</span> hasChanged <span class="token operator">=</span> <span class="token boolean">false</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>oldDeps<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    hasChanged <span class="token operator">=</span> oldDeps<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">dep<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">!</span>Object<span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span>depArray<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">,</span> dep<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>hasChanged<span class="token punctuation">)</span> <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>hooks<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>idx<span class="token punctuation">]</span> <span class="token operator">=</span> depArray
+  <span class="token keyword">this</span><span class="token punctuation">.</span>idx<span class="token operator">++</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这样就完成 <code>useEffect</code> 了啦💥</p> <p>下面是完整的代码</p> <details class="custom-block details"><summary>See More</summary> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token keyword">class</span> <span class="token class-name">MyReact</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>hooks <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>idx <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">useState</span><span class="token punctuation">(</span><span class="token parameter">initVal</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> _idx <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>idx
+    <span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>hooks<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>idx<span class="token punctuation">]</span> <span class="token operator">||</span> initVal
+
+    <span class="token keyword">const</span> <span class="token function-variable function">setState</span> <span class="token operator">=</span> <span class="token parameter">newVal</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>hooks<span class="token punctuation">[</span>_idx<span class="token punctuation">]</span> <span class="token operator">=</span> newVal
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>idx<span class="token operator">++</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>state<span class="token punctuation">,</span> setState<span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token parameter">callback<span class="token punctuation">,</span> depArray</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> oldDeps <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>hooks<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>idx<span class="token punctuation">]</span>
+    <span class="token keyword">let</span> hasChanged <span class="token operator">=</span> <span class="token boolean">false</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>oldDeps<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      hasChanged <span class="token operator">=</span> oldDeps<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">dep<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">!</span>Object<span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span>depArray<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">,</span> dep<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>hasChanged<span class="token punctuation">)</span> <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>hooks<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>idx<span class="token punctuation">]</span> <span class="token operator">=</span> depArray
+    <span class="token keyword">this</span><span class="token punctuation">.</span>idx<span class="token operator">++</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token parameter">Component</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>idx <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">const</span> _C <span class="token operator">=</span> Component
+    _C<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> _C
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> React <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyReact</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Component</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>counter<span class="token punctuation">,</span> setCounter<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>text<span class="token punctuation">,</span> setText<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">'longdd'</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">render</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">{</span> text<span class="token punctuation">,</span> counter <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">click</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setCounter</span><span class="token punctuation">(</span>counter <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">type</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setText</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> app <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>Component<span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+app <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>Component<span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token function">type</span><span class="token punctuation">(</span><span class="token string">'yyf'</span><span class="token punctuation">)</span>
+React<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>Component<span class="token punctuation">)</span>
+</code></pre></div></details> <p>其实不用 React class 只用closure方程也是可以的。</p> <blockquote><p>closure就是可以持有变量的方程 --me🐸
+正是因为这点也可以完成class做到的事情</p></blockquote> <p>下面用closure重写 <code>React class</code></p> <details class="custom-block details"><summary>See More</summary> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> React <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> hooks <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token keyword">let</span> idx <span class="token operator">=</span> <span class="token number">0</span>
+
+  <span class="token keyword">function</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token parameter">initVal</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> state <span class="token operator">=</span> hooks<span class="token punctuation">[</span>idx<span class="token punctuation">]</span> <span class="token operator">||</span> initVal
+    <span class="token keyword">const</span> _idx <span class="token operator">=</span> idx
+    <span class="token keyword">const</span> <span class="token function-variable function">setState</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">newVal</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      hooks<span class="token punctuation">[</span>_idx<span class="token punctuation">]</span> <span class="token operator">=</span> newVal
+    <span class="token punctuation">}</span>
+    idx<span class="token operator">++</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>state<span class="token punctuation">,</span> setState<span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">function</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token parameter">Component</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    idx <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">const</span> <span class="token constant">C</span> <span class="token operator">=</span> <span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token constant">C</span><span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token constant">C</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">function</span> <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token parameter">callback<span class="token punctuation">,</span> depArray</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> oldDeps <span class="token operator">=</span> hooks<span class="token punctuation">[</span>idx<span class="token punctuation">]</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>oldDeps<span class="token punctuation">)</span>
+    <span class="token keyword">let</span> hasChanged <span class="token operator">=</span> <span class="token boolean">true</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>oldDeps<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      hasChanged <span class="token operator">=</span> depArray<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">dep<span class="token punctuation">,</span> i</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">!</span>Object<span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span>dep<span class="token punctuation">,</span> oldDeps<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>hasChanged<span class="token punctuation">)</span> <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    hooks<span class="token punctuation">[</span>idx<span class="token punctuation">]</span> <span class="token operator">=</span> depArray
+    idx<span class="token operator">++</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span> useState<span class="token punctuation">,</span> render<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div></details> <hr> <ul><li><a href="https://github.com/xyyolab" target="_blank" rel="noopener noreferrer">Github<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://blog.xyyolab.com" target="_blank" rel="noopener noreferrer">blog<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div> <footer class="page-edit" style="display:none;"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">5/6/2020, 11:40:30 AM</span></div></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div><canvas id="vuepress-canvas-ribbon"></canvas></div></div>
+    <script src="/assets/js/app.568d1889.js" defer></script><script src="/assets/js/4.064ee4a6.js" defer></script><script src="/assets/js/1.0421326c.js" defer></script><script src="/assets/js/28.6a3ee53b.js" defer></script>
+  </body>
+</html>
