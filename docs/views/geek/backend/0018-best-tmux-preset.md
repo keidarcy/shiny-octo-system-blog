@@ -18,6 +18,9 @@ prev: ./0016-create-our-own-react-hook
 tmux 功能真的很强大，普遍来说强大的工具同时意味着不平滑的学习曲线，用日语说叫 `使いこなせるか` 。
 例如怎么复制内容就差点把我劝退了。
 
+坚持下来以后终于能把 tmux 也变得又好用用能美美的啦！
+![Screenshot](https://raw.githubusercontent.com/atgmello/dracula.omt/master/screenshot.png)
+
 查了很多资料才把自己的 tmux 配置文件写好，可以用 vim 的按键移动，
 clipboard 与系统和 vim 能通用 (需要另外安装reattach-to-user-namespace)
 自己整一堆插件，去弄个好看的 statusbar。
@@ -75,7 +78,99 @@ This configuration uses the following bindings:
  - `<prefix> p` pastes from the top paste-buffer
  - `<prefix> P` lets you choose the paste-buffer to paste from
 
+甚至会教你怎么改 statusbar，例如加上天气
 
+```
+tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #(curl wttr.in?format=3) , %R , %d %b | #{username}#{root} | #{hostname} '
+```
+就会从 [wttr.in](http://wttr.in/) 把天气加进去了。
+
+以及改变 statusbar 的配色。
+
+[Dracula Tmux](https://github.com/atgmello/dracula.omt)
+
+```
+# --- Dracula Theme -----------------------------------------------------------
+#
+# Dracula Color Pallette
+  white='#f8f8f2'        # Foreground
+  gray='#44475a'         # Current Line / Selection
+  dark_gray='#282a36'    # Background
+  light_purple='#bd93f9' # Purple
+  dark_purple='#6272a4'  # Comment
+  cyan='#8be9fd'         # Cyan
+  green='#50fa7b'        # Green
+  orange='#ffb86c'       # Orange
+  red='#ff5555'          # Red
+  pink='#ff79c6'         # Pink
+  yellow='#f1fa8c'       # Yellow
+
+# Focused pane colours:
+tmux_conf_theme_focused_pane_fg='default'
+tmux_conf_theme_focused_pane_bg="${gray}"
+
+# Pane borders colours:
+tmux_conf_theme_pane_border="${gray}"
+tmux_conf_theme_pane_active_border="${light_purple}"
+
+# Pane indicator colours
+tmux_conf_theme_pane_indicator="${dark_purple}"
+tmux_conf_theme_pane_active_indicator="${light_purple}"
+
+# Status line message style
+tmux_conf_theme_message_fg="${white}"
+tmux_conf_theme_message_bg="${dark_purple}"
+tmux_conf_theme_message_attr='bold'
+
+# Status line command style (<prefix> : Escape)
+tmux_conf_theme_message_command_fg="${white}"
+tmux_conf_theme_message_command_bg="${gray}"
+tmux_conf_theme_message_command_attr='bold'
+
+# Window modes style
+tmux_conf_theme_mode_fg="${gray}"
+tmux_conf_theme_mode_bg="${pink}"
+tmux_conf_theme_mode_attr='bold'
+
+# Status line style
+tmux_conf_theme_status_fg="${white}"
+tmux_conf_theme_status_bg="${gray}"
+tmux_conf_theme_status_attr='none'
+
+# Window status style
+tmux_conf_theme_window_status_fg="${white}"
+tmux_conf_theme_window_status_bg="${gray}"
+
+# Window current status style
+tmux_conf_theme_window_status_current_fg="${white}"
+tmux_conf_theme_window_status_current_bg="${dark_purple}"
+tmux_conf_theme_window_status_current_attr='none'
+
+# Window bell status style
+tmux_conf_theme_window_status_bell_fg="${cyan}"
+tmux_conf_theme_window_status_bell_bg='default'
+tmux_conf_theme_window_status_bell_attr='blink,bold'
+
+# Windows last status style
+tmux_conf_theme_window_status_last_fg="${light_purple}"
+tmux_conf_theme_window_status_last_bg='default'
+tmux_conf_theme_window_status_last_attr='none'
+
+# Status left style
+tmux_conf_theme_status_left_fg="${dark_gray},${dark_gray},${dark_gray}"
+tmux_conf_theme_status_left_bg="${green},${pink},${light_purple}"
+tmux_conf_theme_status_left_attr='bold,none,none'
+
+# Status right style
+tmux_conf_theme_status_right_fg="${white},${dark_gray},${dark_gray}"
+tmux_conf_theme_status_right_bg="${dark_purple},${light_purple},${orange}"
+tmux_conf_theme_status_right_attr='none,none,bold'
+
+# Clock
+tmux_conf_theme_clock_colour="${light_purple}"
+```
+
+就可以达到最初的样子啦😃
 
 ---
 
