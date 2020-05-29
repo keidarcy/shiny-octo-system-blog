@@ -5,9 +5,10 @@ sidebar: false
 categories:
   - react
   - frontend
-# sticky: 1
+sticky: 1
 tags:
   - react
+publish: true
 prev: ./0016-create-our-own-react-hook
 # next: ../infra/0011-storing-using-secrets-github-action
 ---

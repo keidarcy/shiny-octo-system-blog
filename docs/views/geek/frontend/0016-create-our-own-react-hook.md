@@ -5,7 +5,6 @@ sidebar: false
 categories:
   - technology
   - frontend
-sticky: 1
 tags:
   - react
 publish: true

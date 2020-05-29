@@ -5,7 +5,6 @@ sidebar: 'auto'
 categories:
   - technology
   - frontend
-sticky: 1
 tags:
   - Vue.js
   - Node.js
