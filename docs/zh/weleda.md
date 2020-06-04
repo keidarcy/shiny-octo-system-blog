@@ -15,7 +15,10 @@ keys:
 <template>
     <div id="app">
         <div class="container">
+            <h1>今回のコミットを戻して、登録済みクレジットカードを消して、定期商品購入すれば、CardSeqがNULLです。</h1>
+            </br>
             <my-video :sources="video.sources" :options="video.options"></my-video>
+            <h1>登録済みのクレジットカードがないアカンウト、は定期購入の時、/shoppingに初めてクレジットカード登録したら、CardSeqがNULLです。</h1>
             <my-video :sources="video1.sources" :options="video1.options"></my-video>
         </div>
     </div>
