@@ -7,7 +7,7 @@ publish: true
 isShowComments: false
 permalink: /video
 keys:
- - 'weblifeweleda'
+ - '123456'
 ---
 
 # video
@@ -27,13 +27,12 @@ export default {
         return {
             video: {
                 sources: [{
-                    src: 'http://covteam.u.qiniudn.com/oceans.mp4',
+                    src: 'images/video.mp4',
                     type: 'video/mp4'
                 }],
                 options: {
                     autoplay: true,
                     volume: 0.6,
-                    poster: 'http://covteam.u.qiniudn.com/poster.png'
                 }
             }
         }
