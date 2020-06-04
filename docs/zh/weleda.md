@@ -5,9 +5,9 @@ sidebar: false
 navbar: false
 publish: true
 isShowComments: false
-permalink: /video
+permalink: /weleda
 keys:
- - '3f91d3df38df68fffc43c9eefa3c64c7'
+ - 'a235a1171546bd013e9a0eb59da46162'
 ---
 
 # video
@@ -32,7 +32,7 @@ export default {
                 }],
                 options: {
                     autoplay: true,
-                    volume: 0.6,
+                    volume: 0.1,
                 }
             }
         }
