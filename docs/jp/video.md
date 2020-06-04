@@ -5,9 +5,8 @@ sidebar: false
 navbar: false
 publish: true
 isShowComments: false
-permalink: /video
-keys:
- - '123456'
+# keys:
+#  - '123456'
 ---
 
 # video
