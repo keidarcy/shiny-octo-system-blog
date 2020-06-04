@@ -36,7 +36,7 @@ export default {
                 }],
                 options: {
                     autoplay: true,
-                    volume: 0.1,
+                    volume: 0,
                 }
             },
             video1: {
@@ -46,7 +46,7 @@ export default {
                 }],
                 options: {
                     autoplay: false,
-                    volume: 0.1,
+                    volume: 0,
                 }
             }
         }
