@@ -16,6 +16,7 @@ keys:
     <div id="app">
         <div class="container">
             <my-video :sources="video.sources" :options="video.options"></my-video>
+            <my-video :sources="video1.sources" :options="video1.options"></my-video>
         </div>
     </div>
 </template>
@@ -32,6 +33,16 @@ export default {
                 }],
                 options: {
                     autoplay: true,
+                    volume: 0.1,
+                }
+            },
+            video1: {
+                sources: [{
+                    src: '/images/video1.mp4',
+                    type: 'video/mp4'
+                }],
+                options: {
+                    autoplay: false,
                     volume: 0.1,
                 }
             }
