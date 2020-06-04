@@ -25,7 +25,7 @@ export default {
         return {
             video: {
                 sources: [{
-                    src: 'images/video.mp4',
+                    src: '/images/video.mp4',
                     type: 'video/mp4'
                 }],
                 options: {
