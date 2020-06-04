@@ -5,6 +5,7 @@ sidebar: false
 navbar: false
 publish: true
 isShowComments: false
+permalink: /video
 ---
 
 # video
