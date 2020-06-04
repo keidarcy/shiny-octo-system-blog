@@ -7,7 +7,7 @@ publish: true
 isShowComments: false
 permalink: /video
 keys:
- - '123456'
+ - '3f91d3df38df68fffc43c9eefa3c64c7'
 ---
 
 # video
