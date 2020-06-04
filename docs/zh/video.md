@@ -5,8 +5,6 @@ sidebar: false
 navbar: false
 publish: true
 isShowComments: false
-# keys:
-#  - '123456'
 ---
 
 # video

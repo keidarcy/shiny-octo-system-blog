@@ -12,8 +12,7 @@ heroImageStyle:
     boxShadow: '0 5px 48px rgba(0,0,0,0.5)',
   }
 permalink: /
-keys:
- - '123456'
+keys: '123456'
 ---
 
 <script>
