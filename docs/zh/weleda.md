@@ -7,7 +7,7 @@ publish: true
 isShowComments: false
 permalink: /weleda
 keys:
- - 'a235a1171546bd013e9a0eb59da46162'
+ - '3f91d3df38df68fffc43c9eefa3c64c7'
 ---
 
 # video
@@ -15,19 +15,15 @@ keys:
 <template>
     <div id="app">
         <div class="container">
-            <h3>今回のコミットを戻して、登録済みクレジットカードを消して、定期商品購入すれば、CardSeqがNULLです。</h3>
-            </br>
-            </br>
-            </br>
-            </br>
-            </br>
-            </br>
-            </br>
-            </br>
-            </br>
-            </br>
+            <h4>今回のコミットを戻して、登録済みクレジットカードを消して、定期商品購入すれば、CardSeqがNULLです。</h4>
             <my-video :sources="video.sources" :options="video.options"></my-video>
-            <h3>登録済みのクレジットカードがないアカンウト、は定期購入の時、/shoppingに初めてクレジットカード登録したら、CardSeqがNULLです。</h3>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            <h4>登録済みのクレジットカードがないアカンウト、は定期購入の時、/shoppingに初めてクレジットカード登録したら、CardSeqがNULLです。</h4>
             <my-video :sources="video1.sources" :options="video1.options"></my-video>
         </div>
     </div>
