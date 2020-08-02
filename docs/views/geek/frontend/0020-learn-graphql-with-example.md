@@ -15,7 +15,7 @@ publish: true
 
 ## GraphQL
 
-GraphQl 全称Graph Query Language(SQL: Structured Query Language), 用的是越来越多了。代替rest是可能的，不过一旦设计需要使用Graphql去fetch data的时候，不懂原理的话写起来就会很麻烦。
+GraphQl 全称Graph Query Language(SQL: Structured Query Language), 用的是越来越多了。完全代替rest是不可能的，不过一旦设计需要使用Graphql去fetch data的时候，不懂原理的话写起来就会很麻烦。
 
 ### Basic
 

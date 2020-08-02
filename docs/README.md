@@ -1,7 +1,7 @@
 ---
 home: true
 bgImage: 'images/banner.jpg'
-bgImageStyle: { display: inherit, height: '1000px' }
+bgImageStyle: { display: none, height: '1000px' }
 heroImage: '/images/logo-without-background.png'
 heroImageStyle:
   {
@@ -26,5 +26,6 @@ export default {
   document.querySelector('h4:nth-child(2)').innerText = 'categories';
   document.querySelector('h4:nth-child(5)').innerText = 'tags';
   }
+
 }
 </script>
