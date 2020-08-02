@@ -1,7 +1,7 @@
 ---
 title: GraphQL Learning MEMO
 date: 2020-08-02
-sidebar: false
+# sidebar: false
 categories:
   - react
   - frontend

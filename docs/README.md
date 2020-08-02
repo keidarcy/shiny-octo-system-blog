@@ -1,7 +1,7 @@
 ---
 home: true
-bgImage: 'images/banner.jpg'
-bgImageStyle: { display: none, height: '1000px' }
+bgImage: ''
+bgImageStyle: { display: inherit, height: '1000px' }
 heroImage: '/images/logo-without-background.png'
 heroImageStyle:
   {
