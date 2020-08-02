@@ -128,6 +128,45 @@ mutation{
 }
 ```
 
+### Inline Fragments
+```
+query HeroForEpisode($ep: Episode!) {
+  hero(episode: $ep){
+    name
+    id
+    appearsIn
+  }
+}
+```
+当想查询Character字段时就没办法了，因为不知道是huamn还是droid,这时候就需要使用`inline fragment`了。
+```
+query HeroForEpisode($ep: Episode!) {
+  hero(episode: $ep){
+    name
+    id
+    appearsIn
+    ... on Droid {
+      primaryFunction
+    }
+  }
+}
+```
+
+```
+{
+  search(text:"an"){
+    __typename
+    ... on Human{
+      name
+      height
+    }
+    ... on Starship{
+      name
+      coordinates
+    }
+  }
+}
+```
 
 
 
