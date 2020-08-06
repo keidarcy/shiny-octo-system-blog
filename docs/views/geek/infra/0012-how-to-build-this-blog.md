@@ -141,7 +141,7 @@ git commit -m 'deploy'
 git push
 
 echo 'https://blog.xyyolab.com'
-echo 'https://github.com/xyyolab/blog/actions'
+echo 'https://github.com/keidarcy/blog/actions'
 ```
 最後にgitの操作も`package.json`に`scripts`化して、最終的に`yarn deploy`だけで、新しいもの書いたら、デプロイできるようになっている。
 
@@ -151,5 +151,5 @@ echo 'https://github.com/xyyolab/blog/actions'
 VuepressとQiitaのmarkdown文法は微秒な違いがある。今後もしQittaも自動デプロイの一部としてやりたいなら、手動で編集しかないかな。
 
 
-- [Github](https://github.com/xyyolab)
+- [Github](https://github.com/keidarcy)
 - [ブログ](https://blog.xyyolab.com)

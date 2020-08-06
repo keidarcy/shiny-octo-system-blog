@@ -173,5 +173,5 @@ tmux_conf_theme_clock_colour="${light_purple}"
 
 ---
 
-- [Github](https://github.com/xyyolab)
+- [Github](https://github.com/keidarcy)
 - [blog](https://blog.xyyolab.com)

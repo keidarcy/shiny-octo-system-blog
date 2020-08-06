@@ -4,4 +4,4 @@ git commit -m 'deploy'
 git push
 
 echo 'https://blog.xyyolab.com'
-echo 'https://github.com/xyyolab/blog/actions'
+echo 'https://github.com/keidarcy/blog/actions'

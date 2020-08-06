@@ -23,7 +23,7 @@ next: 0005-laravel7-upgrade-guide
 
 <!-- more -->
 
-➡︎ [Github⛩](https://github.com/xyyolab/faker-japanese)
+➡︎ [Github⛩](https://github.com/keidarcy/faker-japanese)
 
 ## インストール
 

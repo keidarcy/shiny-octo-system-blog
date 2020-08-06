@@ -299,5 +299,5 @@ const React = (() => {
 
 ---
 
-- [Github](https://github.com/xyyolab)
+- [Github](https://github.com/keidarcy)
 - [blog](https://blog.xyyolab.com)

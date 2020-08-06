@@ -9,7 +9,7 @@ isShowComments: false
 permalink: /pronunciation
 ---
 
-- welcome any [pr](https://github.com/xyyolab/english-pronunciation-for-programmer/pulls) to add some other words or fork this repo then add yourself 🤓
+- welcome any [pr](https://github.com/keidarcy/english-pronunciation-for-programmer/pulls) to add some other words or fork this repo then add yourself 🤓
 
 ## Pronunciations
 

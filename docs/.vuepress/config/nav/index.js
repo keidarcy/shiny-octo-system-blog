@@ -2,7 +2,7 @@ module.exports = {
   en: [
     { text: 'Home', link: '/', icon: 'reco-home' },
     { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
-    { text: 'Github', link: 'https://github.com/xyyolab', icon: 'reco-github' },
+    { text: 'Github', link: 'https://github.com/keidarcy', icon: 'reco-github' },
     {
       text: 'contact',
       ariaLabel: 'contact',
@@ -29,7 +29,7 @@ module.exports = {
   zh: [
     { text: '主页', link: '/', icon: 'reco-home' },
     { text: '留年', link: '/timeline/', icon: 'reco-date' },
-    { text: 'Github', link: 'https://github.com/xyyolab', icon: 'reco-github' },
+    { text: 'Github', link: 'https://github.com/keidarcy', icon: 'reco-github' },
     {
       text: '联系',
       ariaLabel: 'contact',
@@ -56,7 +56,7 @@ module.exports = {
   jp: [
     { text: 'ホーム', link: '/', icon: 'reco-home' },
     { text: 'タイムライン', link: '/timeline/', icon: 'reco-date' },
-    { text: 'Github', link: 'https://github.com/xyyolab', icon: 'reco-github' },
+    { text: 'Github', link: 'https://github.com/keidarcy', icon: 'reco-github' },
     {
       text: 'コンタクト',
       ariaLabel: 'contact',

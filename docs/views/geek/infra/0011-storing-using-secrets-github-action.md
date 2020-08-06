@@ -97,11 +97,11 @@ ${{ secrets.YOURKEY }}
 
 ![Screenshot 2020-03-23 13.36.35.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/470919/0a508150-59e8-948c-4601-b57012db2ed6.png)
 
-- 完整的 `main.yaml` 请参考我的 [Github](https://github.com/xyyolab/blog/blob/master/.github/workflows/main.yml)
+- 完整的 `main.yaml` 请参考我的 [Github](https://github.com/keidarcy/blog/blob/master/.github/workflows/main.yml)
 
 看起来一个小步骤但解决了大问题呢 💃。
 
 ---
 
-- [Github](https://github.com/xyyolab)
+- [Github](https://github.com/keidarcy)
 - [blog](https://blog.xyyolab.com)。
