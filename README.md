@@ -1,14 +1,28 @@
-# My personal blog repository.
-boosted by [Vuepress](https://vuepress.vuejs.org/)
-
 ## [View](https://blog.xyyolab.com)
 
-## Thanks
- - [vuepress-theme-reco](https://github.com/vuepress-reco/vuepress-theme-reco)
+## Snippets
 
-## License
+ts decorator
+```ts
+function time(name: string) {
+    return function (target, propertyKey: string, descriptor: PropertyDescriptor) {
+        const fn = descriptor.value;
+        descriptor.value = (...args) => {
+            console.time(name);
+            const v = fn(...args);
+            console.timeEnd(name);
+            return v;
+        }
+    }
+}
 
-This is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+class C{
+    @time('C.method')
+    method(name: string){
+        console.log('method called', name)
+        for (let i = 0; i < 1000000000; i++){}
+    }
+}
 
----
-[Unmaintained site](https://cyan.xyyolab.com/)
+new C().method('koko')
+```
