@@ -43,3 +43,19 @@ type
 
 output
 `{ mydir: 'myqpp', myname: 'fun' }`
+
+
+## Amplify
+
+```
+amplify init
+```
+
+```
+amplify add function
+```
+
+```
+amplify mock function <name>
+```
+
